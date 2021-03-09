@@ -24,7 +24,6 @@ public class MainGLEventsListener implements GLEventListener {
     public void display(GLAutoDrawable drawable) {
         GL2 gl = drawable.getGL().getGL2();
         gl.glClear(GL2.GL_COLOR_BUFFER_BIT | GL2.GL_DEPTH_BUFFER_BIT);
-//        gl.glEnable(GL2.GL_DEPTH_TEST);
 
         time = (new Date().getTime() - timeStart) / 1000;
         gl.glUseProgram(shaderProgram);
@@ -60,7 +59,6 @@ public class MainGLEventsListener implements GLEventListener {
         initShader(glAutoDrawable, "/vertex_shader.glsl", GL2.GL_VERTEX_SHADER);
         initShader(glAutoDrawable, "/fragment_shader.glsl", GL2.GL_FRAGMENT_SHADER);
         gl.glLinkProgram(shaderProgram);
-//        gl.glValidateProgram(shaderProgram);
         gl.glUseProgram(shaderProgram);
     }
 

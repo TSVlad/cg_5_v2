@@ -9,14 +9,6 @@ void main() {
 
     color = gl_Color;
 
-
-//    vec4 position_in_world_space  = osg_ViewMatrixInverse * position_in_view_space;
-//    position_in_world_space.y = position_in_view_space.y * cos(t + position_in_world_space.y)
-//    position_in_view_space = osg_ViewMatrix * position_in_world_space;
-//    vec4 position_in_object_space = gl_ModelViewMatrixInverse * position_in_view_space;
-//    gl_Position = gl_ModelViewProjectionMatrix * position_in_object_space;
-
-
     float e = exp(coord.y * 3)/(1 + exp(coord.y * 3)); // сигмоида
     color.r = e;
     color.g = 1.0 - e;
