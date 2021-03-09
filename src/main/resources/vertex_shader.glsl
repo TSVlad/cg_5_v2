@@ -9,7 +9,7 @@ void main() {
 
     color = gl_Color;
 
-    float e = exp(coord.y * 3)/(1 + exp(coord.y * 3)); // сигмоида
+    float e = exp(coord.y * 3)/(1 + exp(coord.y * 3));
     color.r = e;
     color.g = 1.0 - e;
     color.b = e;
